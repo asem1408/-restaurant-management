@@ -1,91 +1,15 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>نظام إدارة المطعم</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand">إدارة المطعم</div>
-      <nav>
-        <button class="nav-item active" data-page="dashboard">لوحة التحكم</button>
-        <button class="nav-item" data-page="sales">المبيعات</button>
-        <button class="nav-item" data-page="expenses">المصروفات</button>
-        <button class="nav-item" data-page="reports">التقارير</button>
-      </nav>
-    </aside>
-
-    <main class="content">
-      <header class="topbar">
-        <div>
-          <h1 id="page-title">لوحة التحكم</h1>
-          <p>نسخة تجريبية ببيانات افتراضية</p>
-        </div>
-        <button id="refresh-btn" class="primary">تحديث البيانات</button>
-      </header>
-
-      <section id="dashboard" class="page active">
-        <div class="metrics">
-          <article class="card"><span>مبيعات اليوم</span><strong>40,850 ر.س</strong><small>+8.4% عن أمس</small></article>
-          <article class="card"><span>مبيعات الشهر</span><strong>1,164,300 ر.س</strong><small>الهدف 1.25 مليون</small></article>
-          <article class="card"><span>المصروفات</span><strong>742,600 ر.س</strong><small>63.8% من المبيعات</small></article>
-          <article class="card"><span>صافي الربح</span><strong>421,700 ر.س</strong><small>هامش 36.2%</small></article>
-          <article class="card"><span>متوسط الفاتورة</span><strong>175 ر.س</strong><small>233 فاتورة اليوم</small></article>
-        </div>
-
-        <div class="grid-two">
-          <article class="panel">
-            <div class="panel-head"><h2>المبيعات آخر 7 أيام</h2><span>ر.س</span></div>
-            <div id="sales-chart" class="bar-chart"></div>
-          </article>
-          <article class="panel">
-            <div class="panel-head"><h2>ملخص الأداء</h2></div>
-            <div class="summary-row"><span>نسبة تكلفة التشغيل</span><b>63.8%</b></div>
-            <div class="summary-row"><span>هامش الربح</span><b>36.2%</b></div>
-            <div class="summary-row"><span>متوسط المبيعات اليومية</span><b>38,810 ر.س</b></div>
-            <div class="summary-row"><span>عدد الفواتير</span><b>6,742</b></div>
-          </article>
-        </div>
-      </section>
-
-      <section id="sales" class="page">
-        <article class="panel">
-          <div class="panel-head"><h2>آخر المبيعات</h2><button class="secondary">إضافة عملية بيع</button></div>
-          <div class="table-wrap"><table><thead><tr><th>التاريخ</th><th>الفرع</th><th>الفواتير</th><th>المبيعات</th></tr></thead><tbody>
-            <tr><td>اليوم</td><td>الرئيسي</td><td>233</td><td>40,850 ر.س</td></tr>
-            <tr><td>أمس</td><td>الرئيسي</td><td>221</td><td>37,690 ر.س</td></tr>
-            <tr><td>قبل يومين</td><td>الرئيسي</td><td>228</td><td>39,420 ر.س</td></tr>
-          </tbody></table></div>
-        </article>
-      </section>
-
-      <section id="expenses" class="page">
-        <article class="panel">
-          <div class="panel-head"><h2>المصروفات الشهرية</h2><button class="secondary">إضافة مصروف</button></div>
-          <div class="expense-grid">
-            <div><span>تكلفة المواد</span><b>395,000 ر.س</b></div>
-            <div><span>الرواتب</span><b>176,000 ر.س</b></div>
-            <div><span>الإيجارات والخدمات</span><b>92,600 ر.س</b></div>
-            <div><span>مصروفات أخرى</span><b>79,000 ر.س</b></div>
-          </div>
-        </article>
-      </section>
-
-      <section id="reports" class="page">
-        <div class="metrics three">
-          <article class="card"><span>إجمالي المبيعات</span><strong>1,164,300 ر.س</strong></article>
-          <article class="card"><span>إجمالي المصروفات</span><strong>742,600 ر.س</strong></article>
-          <article class="card"><span>صافي الربح</span><strong>421,700 ر.س</strong></article>
-        </div>
-        <article class="panel"><h2>ملاحظة</h2><p>هذه نسخة أولية. لاحقًا يمكن ربط النظام بملفات Excel أو نظام نقاط البيع وإضافة صلاحيات المستخدمين والفروع.</p></article>
-      </section>
-    </main>
-  </div>
-
-  <div id="toast" class="toast">تم تحديث البيانات</div>
-  <script src="app.js"></script>
-</body>
-</html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>نظام إدارة المطعم</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="app-shell"><aside class="sidebar"><div class="brand">إدارة المطعم</div><nav>
+<button class="nav-item active" data-page="dashboard">لوحة التحكم</button><button class="nav-item" data-page="sales">المبيعات</button><button class="nav-item" data-page="expenses">المصروفات</button><button class="nav-item" data-page="debt">المديونية</button><button class="nav-item" data-page="creditors">الدائنون</button><button class="nav-item" data-page="budget">الخطة المالية</button><button class="nav-item" data-page="reports">التقارير</button>
+</nav></aside><main class="content"><header class="topbar"><div><h1 id="page-title">لوحة التحكم</h1><p>لوحة تشغيل ومالية موحدة</p></div><button id="refresh-btn" class="primary">تحديث البيانات</button></header>
+<section id="dashboard" class="page active"><div class="metrics"><article class="card"><span>متوسط صافي الربح الشهري</span><strong>188,790 ر.س</strong><small>أساس خطة السداد</small></article><article class="card"><span>إجمالي المديونية</span><strong>3,424,130.55 ر.س</strong><small>الرصيد الحالي المعتمد</small></article><article class="card"><span>السداد الشهري</span><strong>122,713.50 ر.س</strong><small>65% من الربح</small></article><article class="card"><span>أرباح الملاك</span><strong>56,637 ر.س</strong><small>30% شهريًا</small></article><article class="card"><span>التطوير</span><strong>9,439.50 ر.س</strong><small>5% شهريًا</small></article></div><div class="grid-two"><article class="panel"><h2>توزيع الربح الشهري</h2><div class="allocation"><div><span>مديونية</span><b>65%</b><i style="width:65%"></i></div><div><span>ملاك</span><b>30%</b><i style="width:30%"></i></div><div><span>تطوير</span><b>5%</b><i style="width:5%"></i></div></div></article><article class="panel"><h2>مؤشرات الخطة</h2><div class="summary-row"><span>مدة إقفال الدين</span><b>28 شهرًا</b></div><div class="summary-row"><span>الموردون</span><b>477,416.47 ر.س</b></div><div class="summary-row"><span>التأمينات</span><b>900,000 ر.س</b></div><div class="summary-row"><span>القروض والسلف</span><b>2,046,714.08 ر.س</b></div></article></div></section>
+<section id="sales" class="page"><article class="panel"><div class="panel-head"><h2>المبيعات</h2><span class="tag">قابل للربط لاحقًا بنقاط البيع</span></div><p>يبقى هذا القسم للتحديث من تقارير المبيعات الفعلية عند استيرادها.</p></article></section>
+<section id="expenses" class="page"><article class="panel"><div class="panel-head"><h2>المصروفات والميزانية</h2><span class="tag">من ملفات الميزانية</span></div><p>تمت إضافة هيكل الخطة المالية والمديونية المتوفر حاليًا. يمكن استكمال بنود الميزانية التفصيلية فور تزويد النظام بملف الموازنة الأصلي.</p></article></section>
+<section id="debt" class="page"><div class="metrics three"><article class="card"><span>إجمالي الدين</span><strong>3,424,130.55 ر.س</strong></article><article class="card"><span>السداد الشهري</span><strong>122,713.50 ر.س</strong></article><article class="card"><span>المدة التقديرية</span><strong>28 شهرًا</strong></article></div><article class="panel"><h2>توزيع مخصص الدين شهريًا</h2><div class="table-wrap"><table><thead><tr><th>الفئة</th><th>النسبة</th><th>السداد الشهري</th><th>الرصيد</th></tr></thead><tbody><tr><td>الموردون</td><td>20%</td><td>24,542.70</td><td>477,416.47</td></tr><tr><td>التأمينات الاجتماعية</td><td>30%</td><td>36,814.05</td><td>900,000</td></tr><tr><td>القروض والسلف</td><td>50%</td><td>61,356.75</td><td>2,046,714.08</td></tr></tbody></table></div></article><article class="panel"><h2>جدول تناقص الدين</h2><div id="debt-chart" class="debt-chart"></div></article></section>
+<section id="creditors" class="page"><article class="panel"><h2>تفصيل الدائنين</h2><div class="table-wrap"><table><thead><tr><th>الفئة</th><th>الدائن</th><th>الرصيد</th><th>السداد الشهري المقترح</th></tr></thead><tbody>
+<tr><td>موردون</td><td>شركة المراعي</td><td>68,982.37</td><td>3,546.20</td></tr><tr><td>موردون</td><td>أسواق المحسن (خضراوات)</td><td>371,065.43</td><td>19,075.48</td></tr><tr><td>موردون</td><td>شركة لمار للتجارة</td><td>4,780.40</td><td>245.75</td></tr><tr><td>موردون</td><td>مؤسسة رسيل الشرق للتشغيل والصيانة</td><td>6,975</td><td>358.57</td></tr><tr><td>موردون</td><td>شركة ثمرات الضيف التجارية</td><td>7,724.71</td><td>397.11</td></tr><tr><td>موردون</td><td>مؤسسة شعلة النصر للتجارة</td><td>15,018.56</td><td>772.06</td></tr><tr><td>موردون</td><td>شركة عبد الرحمن عبد العزيز شبيب للتجارة - أرومتك</td><td>2,870</td><td>147.54</td></tr><tr><td>تأمينات</td><td>التأمينات الاجتماعية</td><td>900,000</td><td>36,814.05</td></tr><tr><td>قروض وسلف</td><td>الشواء الشامي (مديونية قديمة)</td><td>1,180,000</td><td>35,374.24</td></tr><tr><td>قروض وسلف</td><td>قرض حسن أبوعاصم</td><td>430,181.15</td><td>12,896.05</td></tr><tr><td>قروض وسلف</td><td>سلفة سلمان الغماس</td><td>436,532.93</td><td>13,086.46</td></tr>
+</tbody></table></div></article></section>
+<section id="budget" class="page"><div class="metrics three"><article class="card"><span>صافي الربح الشهري</span><strong>188,790 ر.س</strong></article><article class="card"><span>للمديونية 65%</span><strong>122,713.50 ر.س</strong></article><article class="card"><span>للملاك + التطوير</span><strong>66,076.50 ر.س</strong></article></div><article class="panel"><h2>توزيع صافي الربح</h2><div class="table-wrap"><table><thead><tr><th>البند</th><th>النسبة</th><th>شهريًا</th></tr></thead><tbody><tr><td>سداد المديونية</td><td>65%</td><td>122,713.50 ر.س</td></tr><tr><td>أرباح الملاك</td><td>30%</td><td>56,637 ر.س</td></tr><tr><td>تطوير المنشأة</td><td>5%</td><td>9,439.50 ر.س</td></tr><tr class="total"><td>الإجمالي</td><td>100%</td><td>188,790 ر.س</td></tr></tbody></table></div></article></section>
+<section id="reports" class="page"><article class="panel"><h2>التقارير التنفيذية</h2><p>يشمل النظام الآن مؤشرات الربح، المديونية، توزيع السداد، الدائنين وخطة توزيع الأرباح. المرحلة التالية: ربط المبيعات والمصروفات الفعلية واحتساب المؤشرات تلقائيًا.</p></article></section>
+</main></div><div id="toast" class="toast">تم تحديث البيانات</div><script src="app.js"></script></body></html>
