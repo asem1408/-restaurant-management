@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نظام إدارة المطعم</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">إدارة المطعم</div>
+      <nav>
+        <button class="nav-item active" data-page="dashboard">لوحة التحكم</button>
+        <button class="nav-item" data-page="sales">المبيعات</button>
+        <button class="nav-item" data-page="expenses">المصروفات</button>
+        <button class="nav-item" data-page="reports">التقارير</button>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <h1 id="page-title">لوحة التحكم</h1>
+          <p>نسخة تجريبية ببيانات افتراضية</p>
+        </div>
+        <button id="refresh-btn" class="primary">تحديث البيانات</button>
+      </header>
+
+      <section id="dashboard" class="page active">
+        <div class="metrics">
+          <article class="card"><span>مبيعات اليوم</span><strong>40,850 ر.س</strong><small>+8.4% عن أمس</small></article>
+          <article class="card"><span>مبيعات الشهر</span><strong>1,164,300 ر.س</strong><small>الهدف 1.25 مليون</small></article>
+          <article class="card"><span>المصروفات</span><strong>742,600 ر.س</strong><small>63.8% من المبيعات</small></article>
+          <article class="card"><span>صافي الربح</span><strong>421,700 ر.س</strong><small>هامش 36.2%</small></article>
+          <article class="card"><span>متوسط الفاتورة</span><strong>175 ر.س</strong><small>233 فاتورة اليوم</small></article>
+        </div>
+
+        <div class="grid-two">
+          <article class="panel">
+            <div class="panel-head"><h2>المبيعات آخر 7 أيام</h2><span>ر.س</span></div>
+            <div id="sales-chart" class="bar-chart"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><h2>ملخص الأداء</h2></div>
+            <div class="summary-row"><span>نسبة تكلفة التشغيل</span><b>63.8%</b></div>
+            <div class="summary-row"><span>هامش الربح</span><b>36.2%</b></div>
+            <div class="summary-row"><span>متوسط المبيعات اليومية</span><b>38,810 ر.س</b></div>
+            <div class="summary-row"><span>عدد الفواتير</span><b>6,742</b></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="sales" class="page">
+        <article class="panel">
+          <div class="panel-head"><h2>آخر المبيعات</h2><button class="secondary">إضافة عملية بيع</button></div>
+          <div class="table-wrap"><table><thead><tr><th>التاريخ</th><th>الفرع</th><th>الفواتير</th><th>المبيعات</th></tr></thead><tbody>
+            <tr><td>اليوم</td><td>الرئيسي</td><td>233</td><td>40,850 ر.س</td></tr>
+            <tr><td>أمس</td><td>الرئيسي</td><td>221</td><td>37,690 ر.س</td></tr>
+            <tr><td>قبل يومين</td><td>الرئيسي</td><td>228</td><td>39,420 ر.س</td></tr>
+          </tbody></table></div>
+        </article>
+      </section>
+
+      <section id="expenses" class="page">
+        <article class="panel">
+          <div class="panel-head"><h2>المصروفات الشهرية</h2><button class="secondary">إضافة مصروف</button></div>
+          <div class="expense-grid">
+            <div><span>تكلفة المواد</span><b>395,000 ر.س</b></div>
+            <div><span>الرواتب</span><b>176,000 ر.س</b></div>
+            <div><span>الإيجارات والخدمات</span><b>92,600 ر.س</b></div>
+            <div><span>مصروفات أخرى</span><b>79,000 ر.س</b></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="reports" class="page">
+        <div class="metrics three">
+          <article class="card"><span>إجمالي المبيعات</span><strong>1,164,300 ر.س</strong></article>
+          <article class="card"><span>إجمالي المصروفات</span><strong>742,600 ر.س</strong></article>
+          <article class="card"><span>صافي الربح</span><strong>421,700 ر.س</strong></article>
+        </div>
+        <article class="panel"><h2>ملاحظة</h2><p>هذه نسخة أولية. لاحقًا يمكن ربط النظام بملفات Excel أو نظام نقاط البيع وإضافة صلاحيات المستخدمين والفروع.</p></article>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">تم تحديث البيانات</div>
+  <script src="app.js"></script>
+</body>
+</html>
